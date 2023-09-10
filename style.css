@@ -98,12 +98,40 @@ section {
   grid-template-columns: 1fr 1fr;
   justify-items:center;
   background-image: linear-gradient(to left bottom,#514f4f, #83ed63);
+  position: relative;
 }
 
 .obrazky {
   align-self: center;
   animation: roll 3s infinite;
   transform: rotate(30deg);
+}
+
+.hide-tech {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #329f48;
+}
+
+.word-tech {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.container-grid:hover .hide-tech {
+  opacity: 1;
 }
 
 @keyframes roll {
