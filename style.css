@@ -11,7 +11,7 @@ body {
 header{
   text-align: center;
   background-color:  rgb(137, 214, 141);
-  background-image: linear-gradient(#1a1a1a, #8bc17b);
+  background-image: linear-gradient(#020202, #8bc17b);
   color: aliceblue;
 }
 
@@ -38,11 +38,10 @@ section {
 .container {
   flex-basis: 30%;
   border: rgb(137, 214, 141) solid 2px;
-  border-radius: 5%;
+  border-radius: 3%;
   display: flex;
   flex-direction: column;
-  background-color:  rgb(137, 214, 141);
-  background-image: linear-gradient(#1a1a1a, #8bc17b);
+  background-image: linear-gradient(#0a0909, #8bc17b);
   color: aliceblue;
   font-weight: bolder;
 }
@@ -51,6 +50,7 @@ section {
   padding: 2%;
   padding-top: 5%;
   align-self: center;
+  
 }
 
 .p-vb {
@@ -58,15 +58,45 @@ section {
   padding: 5%;
 }
 
+.vision-board {
+  position: relative;
+}
+
+.hide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #329f48;
+}
+
+.word {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.container:hover .hide {
+  opacity: 1;
+}
+
 .container-grid {
   flex-basis: 30%;
   border:  rgb(137, 214, 141) solid 2px;
-  border-radius: 5%;
+  border-radius: 3%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items:center;
-  background-color: rgb(137, 214, 141);
-  background-image: linear-gradient(#514f4f, #8bc17b);
+  background-image: linear-gradient(#514f4f, #83ed63);
 }
 
 .obrazky {
@@ -96,6 +126,37 @@ section {
   padding: 0;
 }
 
+.five-thing {
+  position: relative;
+}
+
+.hide-two {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #329f48;
+}
+
+.word-two {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.container:hover .hide-two {
+  opacity: 1;
+}
+
 /*Footer*/
 footer {
   margin-top: 2%;
@@ -103,5 +164,5 @@ footer {
   background-color: rgb(137, 214, 141);
   padding: 1%;
   color: aliceblue;
-  background-image: linear-gradient(#1a1a1a, #8bc17b);
+  background-image: linear-gradient(#1a1a1a, #93c085);
 }
